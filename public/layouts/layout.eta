@@ -32,17 +32,17 @@
                 'user_id': localStorage.getItem('userId')
             });
         }
-    var el = document.getElementById('job-function');
-    if(el) {
-        el.addEventListener('change', function() {
-    var selectedValue = this.value;
-    console.log('selectedValue',selectedValue);
-    dataLayer.push({
-      'event': 'dropdownSelection',
-      'selectedJobRole': selectedValue
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('job-function').addEventListener('change', function() {
+        var selectedValue = this.value;
+        console.log('selectedValue', selectedValue);
+        dataLayer.push({
+            'event': 'dropdownSelection',
+            'selectedJobRole': selectedValue
+        });
     });
-  });
-    }
+});
+
     </script>
     <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
