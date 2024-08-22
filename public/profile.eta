@@ -18,6 +18,18 @@
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+<script>
+ document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('job-function').addEventListener('change', function() {
+        var selectedValue = this.value;
+        console.log('selectedValue', selectedValue);
+        dataLayer.push({
+            'event': 'dropdownSelection',
+            'selectedJobRole': selectedValue
+        });
+    });
+});
+</script>
 </main>
 
 <%~ include("./partials/footer.eta") %>
