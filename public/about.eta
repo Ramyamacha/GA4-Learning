@@ -5,7 +5,7 @@
 <main class="container-lg pt-3 pb-5">
     <div>
     <input type="text" id="inputField">
-    <button onclick="showValue()">Show Value</button>
+    <button onclick="showValue()" id="showValue">Show Value</button>
     <p id="output"></p>
     </div>
     <h1 class="pt-4 pb-2">About the tutorial series</h1>
