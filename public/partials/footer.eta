@@ -19,7 +19,7 @@
                 </div>
 
                 <div class="col-md-5 offset-md-1 mb-3">
-                    <form id="newsletter-form-footer" action="/thank-you">
+                    <form id="newsletter-form-footer">
                         <h5>Subscribe to our newsletter</h5>
                         <p>This is a demo and does not save your email.</p>
                         <div class="d-flex flex-column flex-sm-row w-100 gap-2">
@@ -32,4 +32,24 @@
             </div>
         </div>
     </section>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var form = document.querySelector('#newsletter-form-footer'); // Update this selector to match your form's ID or class
+  var emailField = form.querySelector('#email'); // Update this selector to match your email input field's ID or class
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission (optional)
+    var email = emailField.value; // Capture the email value from the input field
+    console.log("Email entered:", email); // Optional: Log the email to the console for debugging
+    /*dataLayer.push({
+      event: 'newsletter_signup_email',
+      email: email
+    });*/
+    
+    // Optional: Submit the form after capturing the email
+    form.submit();
+  });
+});
+
+</script>
 </footer>
